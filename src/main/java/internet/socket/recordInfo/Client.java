@@ -61,8 +61,8 @@ public class Client {
             while ((line = keyIn.readLine()) != null) {
                 if (line.indexOf(":") > 0 && line.startsWith("//")) {
                     line = line.substring(2);
-                    ps.println(Protocol.PRIVATE_ROUND + line.split(":")[0] +
-                            Protocol.PRIVATE_ROUND);
+                    ps.println(Protocol.PRIVATE_ROUND + line.split(":")[0] + Protocol.SPLIT_SIGN +
+                            line.split(":")[1] + Protocol.PRIVATE_ROUND);
                 } else {
                     ps.println(Protocol.MSG_ROUND + line + Protocol.MSG_ROUND);
                 }
