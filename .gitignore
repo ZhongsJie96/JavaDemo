@@ -12,6 +12,9 @@
 
 .target/
 
+# properities
+*.properties
+
 .src/main/resources/
 
 *.jpg
